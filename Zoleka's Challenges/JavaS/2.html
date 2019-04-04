@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Ch2.css">
+    <script src="Ch2.js" type="text/JavaScript"></script>
+</head>
+
+<body>
+       <p>
+        2 Write a JavaScript program to get the website URL (loading page).
+    </p>
+    <p id="fetchURL"></p>
+    <button onclick="loadUrl()">Click me</button>
+
+</body>
+
+</html>
+
+<script>
+    function loadUrl() {
+        document.getElementById("fetchURL").innerHTML = document.URL;
+    }
+</script>
+
+</body>
+
+</html>

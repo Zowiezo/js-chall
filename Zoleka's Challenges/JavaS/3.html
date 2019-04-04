@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="ch3.css">
+  <script src="Ch3.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <h1>Challenge 3</h1>
+
+  <p>JavaScript program to check if a string starts with 'Java' and false otherwise.</p>
+  <p>Find out if string starts with Java.</p>
+  <strong>This is Case Sensitive</strong>
+  <button onclick="startWord()">Try it</button>
+
+</body>
+<script>
+  function startWord() {
+    var k = prompt("Insert Sentence");
+    var z = k.startsWith('Java');
+    window.alert("It is" + " " + z);
+
+  }
+</script>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <div>
+        <header>
+            <h1>Challenges</h1>
+        </header>
+        <h2>Challenge 1</h2>
+        <p>JavaScript program to display the current day and time.. </p>
+        <link rel="stylesheet" type="text/css" media="screen" href="Ch4.css">
+        <script src="Ch1.js" type="text/javascript"></script>
+        </head>
+
+
+        <div id="dateDiv"></div>
+        <script>
+            function showDate() {
+                var now = new Date();
+                var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+                var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+
+                tnow = new Date();
+                thour = now.getHours();
+                tmin = now.getMinutes();
+                tsec = now.getSeconds();
+
+                if (tsec <= 9)
+                    tsec = "0" + tsec;
+                if (tmin < 12)
+                    tmin = "0" + tmin
+                var suffix = "AM";
+                if (thour >= 12) {
+                    suffix = "PM";
+                    thour = thour - 12;
+                }
+
+                today = days[now.getDay()] + ", " + "  " + thour + suffix + ":" + tmin + ":" + tsec;
+                document.getElementById("dateDiv").innerHTML = today;
+            }
+            setInterval("showDate()", 1000);
+        </script>
+        <h2>Challenge 2</h2>
+        <link rel="stylesheet" type="text/css" media="screen" href=".css">
+        <script src="Ch2.js" type="text/JavaScript"></script>
+        
+        <p>To get the website URL (loading page).</p>
+
+        <p id="fetchURL"></p>
+        <button onclick="loadUrl()">Click me</button>
+
+        <script>
+            function loadUrl() {
+                document.getElementById("fetchURL").innerHTML = document.URL;
+            }
+        </script>
+
+        </script>
+        <h2>Challenge3</h2>
+        <link rel="stylesheet" type="text/css" media="screen" href=".css">
+        <script src="Ch3.js" type="text/javascript"></script>
+
+        <p>Find out if sentence starts with Java.</p>
+        <strong>This is Case Sensitive</strong>
+        <button onclick="startWord()">Try it</button>
+
+        <script>
+            function startWord() {
+                var k = prompt("Insert Sentence");
+                var z = k.startsWith('Java');
+                window.alert("It is" + " " + z);
+            }
+        </script>
+
+        <h2>Challenge 4</h2>
+
+        <script src="..\[Zoleka's Challenges]\[Ch4].js" type="text/JavaScript">
+        </script>
+
+        <p>Calculate largest among three numbers</p>
+
+        Enter number 1: <input type="text" id="N1"></input><br>
+        Enter number 2: <input type="text" id="N2"></input><br>
+        Enter number 3: <input type="text" id="N3"></input><br>
+
+        <button onclick="largest()">Click Me!</button>
+        <script>
+            function largest() {
+                var num1, num2, num3;
+                num1 = Number(document.getElementById("N1").value);
+                num2 = Number(document.getElementById("N2").value);
+                num3 = Number(document.getElementById("N3").value);
+
+                if (num1 > num2 && num1 > num3) {
+                    window.alert(num1 + " " + "is the largest");
+                } else if (num2 > num1 && num2 > num3) {
+                    window.alert(num2 + " " + "is the largest");
+                } else if (num3 > num1 && num3 > num1) {
+                    window.alert(num3 + " " + "is the largest");
+                }
+            }
+        </script>
+        <h2>Challenge 5</h2>
+        <link rel="stylesheet" type="text/css" media="screen" href=".css">
+        <script src="Ch5.js" type="text/javascript"></script>
+
+        <p> Capitalize the first letter of each word of a given string.</p>
+        <form>
+            <input type="text" id="getLet">
+            <button onclick="capitalLetter( )">Click here</button>
+
+        </form>
+
+
+        <script>
+            function capitalLetter() {
+                var capLet = document.getElementById("getLet").value
+                capLet = capLet.split(" ");
+                for (var i = 0, x = capLet.length; i < x; i++) {
+                    capLet[i] = capLet[i][0].toUpperCase() + capLet[i].substr(1);
+                }
+                alert(capLet.join(" "));
+
+
+
+            }
+        </script>
+
+        <h2>Challenge 6</h2>
+        <link rel="stylesheet" type="text/css" media="screen" href=".css">
+        <script src="Ch6.js" type="text/javascript"></script>
+        <p> Converts a given number to hours and minutes. </p>
+        <form>
+
+            Enter Number: <input type="text" id="conNum">
+            <br>
+            <button onclick="convertNumber()">Convert Me</button>
+        </form>
+
+        <script>
+            function convertNumber() {
+                var num = document.getElementById("conNum").value
+                var hours = Math.floor(num / 60);
+                var minutes = num % 60;
+                alert(hours + 'hr' + ' ' + minutes + 'min');
+            };
+        </script>
+</body>
+
+</html>

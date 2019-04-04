@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Page Title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" media="screen" href="Ch4.css">
+            <script src="..\[Zoleka's Challenges]\[Ch4].js"type="text/JavaScript">
+            </script>
+</head>
+<body>
+        <h1>Challenge 4</h1>
+    
+        <p>JavaScript program to find the largest of three given integers.</p> 
+    
+        <p>Click the button to find the largest number.</p>
+    
+
+<h2>Calculate largest among three numbers</h2>
+
+<br>
+Enter number 1: <input type="text" id="N1"></input><br>
+Enter number 2: <input type="text" id="N2"></input><br>
+Enter number 3: <input type="text" id="N3"></input><br>
+
+<bt><button onclick="largest()">Click Me!</button></bt>
+</body>
+
+		<script>
+			function largest()
+			{
+				var num1, num2, num3;
+				num1 = Number(document.getElementById("N1").value);
+				num2 = Number(document.getElementById("N2").value);
+				num3 = Number(document.getElementById("N3").value);
+
+				if(num1>num2 && num1>num3)
+				{
+					window.alert(num1 + " " + "is the largest");
+				}
+				else if(num2>num1 && num2>num3)
+				{
+					window.alert(num2 + " " + "is the largest");
+				}
+				else if(num3>num1 && num3>num1)
+				{
+					window.alert(num3 + " " + "is the largest");
+				}
+			}
+		</script>
+
+            
+</html>

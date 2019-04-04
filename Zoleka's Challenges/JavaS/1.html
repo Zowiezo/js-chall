@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Ch1.css">
+    <script src="Ch1.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Challenge 1</h1>
+    <p>JavaScript program to display the current day and time.. </p>
+
+    <div id="dateDiv"></div>
+
+    <script>
+        function showDate() {
+            var now = new Date();
+            var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+
+
+
+            tnow = new Date();
+            thour = now.getHours();
+            tmin = now.getMinutes();
+            tsec = now.getSeconds();
+
+
+            if (tsec <= 9)
+                tsec = "0" + tsec;
+            if (tmin < 12)
+                tmin = "0" + tmin
+            var suffix = "AM";
+            if (thour >= 12) {
+                suffix = "PM";
+                thour = thour - 12;
+            }
+            today = days[now.getDay()] + ", " + "  " + thour + suffix + ":" + tmin + ":" + tsec;
+            document.getElementById("dateDiv").innerHTML = today;
+        }
+        setInterval("showDate()", 1000);
+    </script>
+
+</body>
+
+</html>
